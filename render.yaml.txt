@@ -1,0 +1,7 @@
+type: worker
+    name: queue
+    region: ohio
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "celery --app tasks worker --loglevel info --concurrency 4"
+    autoDeploy: false
